@@ -1,0 +1,29 @@
+---
+import { SITE_LOGO } from "../constants";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header>
+  <nav>
+    <h2>
+      <a href="/">{SITE_LOGO}</a>
+    </h2>
+    <ThemeToggle />
+  </nav>
+</header>
+<style>
+  header {
+		margin: 0;
+		padding: 1.5em;
+  }
+  h2 {
+		margin: 0;
+		font-size: 2rem;
+    display: block;
+	}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
