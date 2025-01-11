@@ -85,6 +85,8 @@ function sun_char_codes(n: string) {
 }
 ```
 
+HOLA
+
 What will be the complexity of this function?
 
 It will be `O(N)` this is because we always take the worst case scenario. Therefore any string with `E` in it will terminate early unless E is the last item in the list in which case it is still `O(N)`.
