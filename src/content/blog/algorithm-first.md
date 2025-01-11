@@ -15,15 +15,15 @@ Often it help us to make decisions about what data structures and algorithms to 
 
 So let's do an small example
 
-```markdown
-function sum_char_codes (n: string): number {
-let sum = 0;
+```js
+function sum_char_codes(n: string): number {
+  let sum = 0;
 
-for (let i = 0; i < n.lenth; i++) {
-sum += n.charCodeAt(i)
-}
+  for (let i = 0; i < n.lenth; i++) {
+    sum += n.charCodeAt(i);
+  }
 
-return sum;
+  return sum;
 }
 ```
 
@@ -33,19 +33,19 @@ But to make it simple for calculating the `Big O` of an algorithm we look for lo
 
 But what about this:
 
-```markdown
-function sum_char_codes (n: string): number {
-let sum = 0;
+```js
+function sum_char_codes(n: string): number {
+  let sum = 0;
 
-for (let i = 0; i < n.lenth; i++) {
-sum += n.charCodeAt(i)
-}
+  for (let i = 0; i < n.lenth; i++) {
+    sum += n.charCodeAt(i);
+  }
 
-for (let i = 0; i < n.lenth; i++) {
-sum += n.charCodeAt(i)
-}
+  for (let i = 0; i < n.lenth; i++) {
+    sum += n.charCodeAt(i);
+  }
 
-return sum;
+  return sum;
 }
 ```
 
@@ -66,14 +66,15 @@ Just because `N` is faster than `N^2`, does not mean practically is always faste
 
 Let's see another example
 
-```
+```js
 function sun_char_codes(n: string) {
   let sum = 0;
 
   for (let i = 0; i < n.length; i++) {
     const charCode = n.charCodeAt(i);
 
-    if (charCode == 69) { // Capital E
+    if (charCode == 69) {
+      // Capital E
       return sum;
     }
 
@@ -87,3 +88,5 @@ function sun_char_codes(n: string) {
 What will be the complexity of this function?
 
 It will be `O(N)` this is because we always take the worst case scenario. Therefore any string with `E` in it will terminate early unless E is the last item in the list in which case it is still `O(N)`.
+
+This series continues with [Search](https://carlos-website-sable.vercel.app/blog/search)
